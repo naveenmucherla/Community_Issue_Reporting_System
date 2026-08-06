@@ -107,14 +107,16 @@ const Navbar = () => {
         top: 0,
         zIndex: 1000,
         width: '100%',
+        height: 74,
+        lineHeight: 'normal',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '0 24px',
+        padding: '8px 24px',
         background: isDarkMode ? 'rgba(20, 20, 20, 0.9)' : 'rgba(255, 255, 255, 0.95)',
         backdropFilter: 'blur(10px)',
         borderBottom: isDarkMode ? '1px solid #303030' : '1px solid #f0f0f0',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
+        boxShadow: '0 4px 12px rgba(0,0,0,0.06)'
       }}
     >
       {/* Brand Logo & Name */}
