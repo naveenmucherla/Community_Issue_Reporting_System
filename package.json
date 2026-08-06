@@ -1,11 +1,14 @@
 {
   "name": "community-issue-reporting-platform",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "homepage": "https://naveenmucherla.github.io/Community_Issue_Reporting_System",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "oxlint",
     "preview": "vite preview"
   },
@@ -33,6 +36,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
+    "gh-pages": "^6.3.0",
     "oxlint": "^1.75.0",
     "vite": "^8.2.0"
   }
