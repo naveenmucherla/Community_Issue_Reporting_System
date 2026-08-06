@@ -149,7 +149,7 @@ function App() {
         <AuthProvider>
           <IssueProvider>
             <NotificationProvider>
-              <Router>
+              <Router basename={import.meta.env.BASE_URL}>
                 <AppLayout />
               </Router>
             </NotificationProvider>
