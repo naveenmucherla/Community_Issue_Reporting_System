@@ -110,7 +110,7 @@ const ReportIssue = () => {
       address: selectedLocation.address,
       images,
       createdBy: {
-        uid: currentUser?.id || 'guest',
+        uid: currentUser?.id || currentUser?.uid || 'guest',
         name: currentUser?.name || 'Citizen',
         email: currentUser?.email || 'citizen@civicfix.org',
         photoURL: currentUser?.avatar || ''

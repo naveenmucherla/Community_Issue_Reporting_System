@@ -19,7 +19,12 @@ const MyComplaints = () => {
   const [editingIssue, setEditingIssue] = useState(null);
   const [form] = Form.useForm();
 
-  const myIssues = issues.filter(i => i.createdBy?.uid === currentUser?.id || currentUser?.id === 'demo-citizen-1');
+  const myIssues = issues.filter(i => 
+    i.createdBy?.uid === currentUser?.id || 
+    i.createdBy?.uid === currentUser?.uid || 
+    (currentUser?.email && i.createdBy?.email?.toLowerCase() === currentUser?.email?.toLowerCase()) ||
+    currentUser?.id === 'demo-citizen-1'
+  );
 
   const handleOpenEdit = (record) => {
     setEditingIssue(record);

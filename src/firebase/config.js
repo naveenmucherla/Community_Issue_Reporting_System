@@ -3,20 +3,19 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
-// Firebase configuration using Vite environment variables with fallback values
+// Firebase configuration using Vite environment variables with user-provided production credentials
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyDemoConfigKeyForCivicFixApp2026",
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "civicfix-demo.firebaseapp.com",
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "civicfix-demo",
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "civicfix-demo.appspot.com",
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "123456789012",
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:123456789012:web:demo123456789"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyBmrrEEb0aIr4QBYk4yQeo0om3vUjPrMjU",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "studio-287204068-4e6f6.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "studio-287204068-4e6f6",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "studio-287204068-4e6f6.firebasestorage.app",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "161660787641",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:161660787641:web:bcbf9dcf7cfe382ac53468"
 };
 
-// Check if Firebase keys are real live keys or demo configuration
+// Check if Firebase keys are real live keys
 export const isLiveFirebaseConfigured = Boolean(
-  import.meta.env.VITE_FIREBASE_API_KEY && 
-  !import.meta.env.VITE_FIREBASE_API_KEY.includes('Demo')
+  firebaseConfig.apiKey && !firebaseConfig.apiKey.includes('Demo')
 );
 
 // Initialize Firebase
